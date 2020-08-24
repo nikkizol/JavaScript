@@ -9,12 +9,19 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    document.getElementById("run").addEventListener("click", function() {
+    document.getElementById("run").addEventListener("click", function () {
+        var result = "";
+        var res = "";
+        for (var x = 1; x <= 21; ++x) {
+            res = x * x;
+            result = result  + res + "\n";
+        }
+        alert(result);
 
-        // your code here
 
     });
 
-})();
+})
+();
