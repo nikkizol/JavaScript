@@ -12,13 +12,13 @@
 (function () {
 
     document.getElementById("run").addEventListener("click", function () {
-        var result = "";
-        var res = "";
-        for (var x = 1; x <= 21; ++x) {
-            res = x * x;
-            result = result  + res + "\n";
+        var msg = "";
+        var sum = 0;
+        for (var x = 1; x <= 21; x++) {
+            sum = x * x;
+            msg = msg + sum + "\n";
         }
-        alert(result);
+        alert(msg);
 
 
     });
