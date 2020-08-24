@@ -15,15 +15,15 @@
     var gender = prompt("What is you gender?");
     var city = prompt("Where are you from (city)?");
     result = confirm("Please, confirm your answers:\n" + "Age: " + age + ";\n" + "Gender: " + gender + ";\n" + "City: " + city);
-    if (result == true) {
+    if (result === true) {
         alert("Thank you for your answers!");
     }
-    while (result == false) {
+    while (!result === false) {
         var age = prompt("How old are you?");
         var gender = prompt("What is you gender?");
         var city = prompt("Where are you from (city)?");
         result = confirm("Please, confirm your answers:\n" + "Age: " + age + ";\n" + "Gender: " + gender + ";\n" + "City: " + city);
-        if (result == true) {
+        if (result === true) {
             alert("Thank you for your answers!");
         }
     }
