@@ -9,8 +9,15 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+    run.addEventListener('click', function () {
+        document.body.style.background = colors();
+    });
 
-    // your code here
+    function colors() {
+        var hex = Math.floor(Math.random() * 0xFFFFFF);
+        return "#" + ("000000" + hex.toString(16)).substr(-6);
+    }
+
 
 })();
