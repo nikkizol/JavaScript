@@ -10,18 +10,17 @@
 // You will have time to focus on it later.
 
 (function () {
-    var bg = document.getElementById('bg');
     red.addEventListener('click', function () {
-        bg.style.backgroundColor = "red";
+        document.body.style.background = "red";
     });
     green.addEventListener('click', function () {
-        bg.style.backgroundColor = "green";
+        document.body.style.background = "green";
     });
     yellow.addEventListener('click', function () {
-        bg.style.backgroundColor = "yellow";
+        document.body.style.background = "yellow";
     });
     blue.addEventListener('click', function () {
-        bg.style.backgroundColor = "blue";
+        document.body.style.background = "blue";
     });
 
 })();
