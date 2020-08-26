@@ -9,23 +9,26 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+    document.getElementById('run').addEventListener('click', function (e) {
+        var fruits = [
+            "apple",
+            "perry",
+            "strawberry",
+            "tomato",
+            "kiwi",
+            "banana",
+            "orange",
+            "mandarin",
+            "durian",
+            "peach",
+            "grapes",
+            "cherry",
+        ];
 
-    var fruits = [
-        "apple",
-        "perry",
-        "strawberry",
-        "tomato",
-        "kiwi",
-        "banana",
-        "orange",
-        "mandarin",
-        "durian",
-        "peach",
-        "grapes",
-        "cherry",
-    ];
+        console.log(fruits.includes("apple"));
 
-    // your code here
+    });
+
 
 })();
