@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-
+    document.getElementById('run').addEventListener('click', function (e) {
     var fruits = [
         "pomme",
         "poire",
@@ -23,7 +23,10 @@
         "raisin",
         "cerise",
     ];
+        fruits[0]= "bananna"
+        fruits[9] = "kiwi"
 
-    // your code here
-
+        alert(fruits)
+    });
 })();
+
