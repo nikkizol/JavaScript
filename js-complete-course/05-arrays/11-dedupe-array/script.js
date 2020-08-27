@@ -10,24 +10,25 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    var fruits = [
-        "cerise",
-        "durian",
-        "pomme",
-        "poire",
-        "fraise",
-        "tomate",
-        "orange",
-        "mandarine",
-        "fraise",
-        "durian",
-        "pêche",
-        "cerise",
-        "raisin",
-        "cerise",
-    ];
-
-    // your code here
+    document.getElementById('run').addEventListener('click', function (e) {
+        var fruits = [
+            "cerise",
+            "durian",
+            "pomme",
+            "poire",
+            "fraise",
+            "tomate",
+            "orange",
+            "mandarine",
+            "fraise",
+            "durian",
+            "pêche",
+            "cerise",
+            "raisin",
+            "cerise",
+        ];
+        let unique = [...new Set(fruits)];
+        console.log(unique)
+    });
 
 })();
