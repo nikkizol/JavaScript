@@ -11,6 +11,12 @@
 
 (function() {
 
-    // your code here
+    var img = document.createElement('img');
+    var targ = document.getElementById('target').appendChild(img);
+    img.src = document.getElementById("source").getAttribute("data-image")
+    targ.innerHTML = img
+    var element = document.getElementById('source');
+    element.remove();
+
 
 })();
