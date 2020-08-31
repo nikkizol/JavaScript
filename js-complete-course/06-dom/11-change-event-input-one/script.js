@@ -11,13 +11,15 @@
 
 (function () {
 
-    document.getElementById('pass-one').onkeyup = function () {
+    function changeEvent(e) {
         let input = document.getElementById("pass-one");
         input.maxLength = 10;
         let inp = document.getElementById('pass-one').value.length
         document.getElementById("counter").innerHTML = inp + '/10';
 
     }
+
+    document.getElementById("pass-one").addEventListener("keyup", changeEvent);
 
 
 })();

@@ -11,7 +11,7 @@
 
 (function () {
 
-    document.getElementById('pass-one').onkeyup = function () {
+    function changeEvent (e) {
         let x = document.getElementById('pass-one').value
         if (x.match(/[0-9]{2}/) && x.length >= 8)
             document.getElementById("validity").innerHTML = "Ok"
@@ -20,6 +20,8 @@
             document.getElementById("validity").innerHTML = "Not ok"
         }
     }
+
+    document.getElementById("pass-one").addEventListener("keyup", changeEvent);
 
 
 })();
