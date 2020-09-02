@@ -12,8 +12,8 @@
 (function () {
     let txt = document.getElementById("target").innerHTML
     document.getElementById("target").innerHTML = "";
-    var i = 0;
-    var speed = 80;
+    let i = 0;
+    let speed = 80;
 
     function typeWriter() {
         if (i < txt.length) {

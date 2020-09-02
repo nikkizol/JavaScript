@@ -19,7 +19,7 @@
     but[0].onclick = function () {
         if (i < 499)
             i++
-        target.innerHTML = "0" + [i] + [y] + [z] + [x]
+        target.innerHTML = "0" + i + y + z + x;
     }
     but[1].onclick = function () {
         if (y < 99)
@@ -28,7 +28,7 @@
             y = "0" + y
         } else
             y
-        target.innerHTML = "0" + [i] + [y] + [z] + [x]
+        target.innerHTML = "0" + i + y + z + x;
     }
 
     but[2].onclick = function () {
@@ -38,7 +38,7 @@
             z = "0" + z
         } else
             z
-        target.innerHTML = "0" + [i] + [y] + [z] + [x]
+        target.innerHTML = "0" + i + y + z + x;
     }
     but[3].onclick = function () {
         if (x < 99)
@@ -47,7 +47,7 @@
             x = "0" + x
         } else
             x
-        target.innerHTML = "0" + [i] + [y] + [z] + [x]
+        target.innerHTML = "0" + i + y + z + x;
     }
 
 })();
