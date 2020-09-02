@@ -10,13 +10,14 @@
 // You will have time to focus on it later.
 
 (function () {
+    let emp = innerHTML = "";
     let target = document.getElementById("target")
     let targetArray = target.innerHTML.split(' ')
     for (let i = 0; i < targetArray.length; i++) {
         let span = document.createElement('span');
         span.textContent = targetArray[i];
+        console.log(span);
         target.appendChild(span)
-        // console.log(span)
     }
     let sp = document.querySelectorAll("span")
         sp[1].style.fontSize = "5px";
@@ -33,7 +34,7 @@
         sp[12].style.fontSize = "10px";
         sp[13].style.fontSize = "5px";
 
-    console.log(sp)
+    console.log(emp)
 
 
 })();
