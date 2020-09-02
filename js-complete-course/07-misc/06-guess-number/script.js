@@ -10,25 +10,28 @@
 // You will have time to focus on it later.
 
 (function () {
-    let x = Math.floor(Math.random() * 99) + 1;
-    console.log(x)
-    let guesses = 0;
-    let y = prompt("Guess the numb between 1 and 100?")
+    window.addEventListener('load', function () {
+        let x = Math.floor(Math.random() * 99) + 1;
+        console.log(x)
+        let guesses = 0;
 
-    while (y !== x) {
-        if (y == null) {
-            break
-        } else if (y < x) {
-            y = prompt("Higher")
-            guesses++;
-        } else if (y > x) {
-            y = prompt("Lower")
-            guesses++;
-        } else if (y === x) {
-            alert("Good job, you did " + guesses + " tries")
-            break
+        let y = prompt("Guess the numb between 1 and 100?")
+        while (y !== x) {
+            if (y === null) {
+                return;
+            }
+            if (y < x) {
+                y = prompt("Higher")
+                guesses++;
+            } else if (y > x) {
+                y = prompt("Lower")
+                guesses++;
+            } else if (y == x) {
+                alert("Good job, you did guess in " + guesses + " tries")
+                break
+
+            }
+
         }
-
-    }
-
+    })
 })();
