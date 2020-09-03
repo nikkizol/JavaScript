@@ -10,31 +10,22 @@
 // You will have time to focus on it later.
 
 (function () {
-    let emp = innerHTML = "";
-    let target = document.getElementById("target")
-    let targetArray = target.innerHTML.split(' ')
-    for (let i = 0; i < targetArray.length; i++) {
-        let span = document.createElement('span');
-        span.textContent = targetArray[i];
-        console.log(span);
-        target.appendChild(span)
+    let emptyTarget = [];
+    let target = document.getElementById("target");
+    let font = 1;
+    let targetArray = target.innerHTML.split(' ');
+    for (let i = 0; i <= 6; i++) {
+        let txt = targetArray[i].fontsize(font);
+            font++
+        emptyTarget.push(txt);
     }
-    let sp = document.querySelectorAll("span")
-        sp[1].style.fontSize = "5px";
-        sp[2].style.fontSize = "10px";
-        sp[3].style.fontSize = "15px";
-        sp[4].style.fontSize = "20px";
-        sp[5].style.fontSize = "30px";
-        sp[6].style.fontSize = "35px";
-        sp[7].style.fontSize = "40px";
-        sp[8].style.fontSize = "35px";
-        sp[9].style.fontSize = "25px";
-        sp[10].style.fontSize = "20px";
-        sp[11].style.fontSize = "15px";
-        sp[12].style.fontSize = "10px";
-        sp[13].style.fontSize = "5px";
+    for (let i = 5; i <= 12; i++) {
+        let txt = targetArray[i].fontsize(font);
+                font--
+        emptyTarget.push(txt);
+    }
 
-    console.log(emp)
+    document.getElementById("target").innerHTML = emptyTarget.join(' ');
 
 
 })();
@@ -58,3 +49,19 @@
 
 // let sp = document.querySelectorAll("span");
 // sp[2].style.fontSize = "10px";
+
+
+// let sp = document.querySelectorAll("span")
+// sp[1].style.fontSize = "5px";
+// sp[2].style.fontSize = "10px";
+// sp[3].style.fontSize = "15px";
+// sp[4].style.fontSize = "20px";
+// sp[5].style.fontSize = "30px";
+// sp[6].style.fontSize = "35px";
+// sp[7].style.fontSize = "40px";
+// sp[8].style.fontSize = "35px";
+// sp[9].style.fontSize = "25px";
+// sp[10].style.fontSize = "20px";
+// sp[11].style.fontSize = "15px";
+// sp[12].style.fontSize = "10px";
+// sp[13].style.fontSize = "5px";

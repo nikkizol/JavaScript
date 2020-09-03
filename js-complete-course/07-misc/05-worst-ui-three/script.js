@@ -10,14 +10,14 @@
 // You will have time to focus on it later.
 
 (function () {
-    let speed = 200
+    const speed = 200
     let n = 460
     let x = "00"
     let z = "00"
     let y = "00"
-    let but = document.querySelectorAll("button")
-    let target = document.getElementById("target")
-    let partOne = document.getElementById('part-one')
+    let but = document.querySelectorAll("button");
+    let target = document.getElementById("target");
+    let partOne = document.getElementById('part-one');
     let parttwo = document.getElementById('part-two');
     let partThree = document.getElementById('part-three');
     let partFour = document.getElementById('part-four');
