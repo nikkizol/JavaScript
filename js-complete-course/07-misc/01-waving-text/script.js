@@ -9,6 +9,9 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+
+
+// ****WORKS****
 (function () {
     let emptyTarget = [];
     let target = document.getElementById("target");
@@ -16,12 +19,12 @@
     let targetArray = target.innerHTML.split(' ');
     for (let i = 0; i <= 6; i++) {
         let txt = targetArray[i].fontsize(font);
-            font++
+        font++
         emptyTarget.push(txt);
     }
     for (let i = 5; i <= 12; i++) {
         let txt = targetArray[i].fontsize(font);
-                font--
+        font--
         emptyTarget.push(txt);
     }
 
@@ -29,6 +32,16 @@
 
 
 })();
+
+
+
+
+
+
+
+
+
+
 
 // let target = document.getElementById("target").innerHTML
 // targetArray = target.split(" ")

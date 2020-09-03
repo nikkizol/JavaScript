@@ -10,17 +10,24 @@
 // You will have time to focus on it later.
 
 (function () {
-    const speed = 200
-    let n = 460
-    let x = "00"
-    let z = "00"
-    let y = "00"
+    const speed = 200;
+    let n = 460;
+    let x = "00";
+    let z = "00";
+    let y = "00";
+    let txt = "";
     let but = document.querySelectorAll("button");
     let target = document.getElementById("target");
     let partOne = document.getElementById('part-one');
     let parttwo = document.getElementById('part-two');
     let partThree = document.getElementById('part-three');
     let partFour = document.getElementById('part-four');
+    let targetArray = target.innerHTML.split('');
+    for (let i = 0; i < targetArray.length; i++)
+        txt += "<span>" + targetArray[i] + "</span>";
+        console.log(txt)
+
+
     function run() {
         n = Math.floor(Math.random()*39) + 1;
         n += 460;
@@ -32,24 +39,38 @@
         y = Math.floor(Math.random()*99) + 1;
         partFour.value = y;
         setTimeout(run, speed);
+
     }
     run();
-
+    document.getElementById("target").innerHTML = txt;
     but[0].onclick = function() {
         partOne.value = n;
-        target.innerHTML = "0" + n
+        document.querySelectorAll('span' )[1].innerHTML =  "";
+        document.querySelectorAll('span' )[2].innerHTML =  "";
+        document.querySelectorAll('span' )[3].innerHTML =  "";
+        document.querySelectorAll('span' )[4].innerHTML = "0" + n;
     }
 
     but[1].onclick = function() {
         partOne.value = x;
-        target.innerHTML += x
+        if (x < 10) {
+            x = "0" + x}
+        document.querySelectorAll('span')[5].innerHTML = "";
+        document.querySelectorAll('span')[6].innerHTML = x;
     }
     but[2].onclick = function() {
         partOne.value = z;
-        target.innerHTML += z
+        if (z < 10) {
+            z = "0" + z}
+        document.querySelectorAll('span')[7].innerHTML = "";
+        document.querySelectorAll('span')[8].innerHTML = z;
     }
     but[3].onclick=  function() {
         partOne.value = y;
-        target.innerHTML += y
+        if (y < 10) {
+            y = "0" + y }
+        document.querySelectorAll('span')[9].innerHTML = "";
+        document.querySelectorAll('span')[10].innerHTML = y;
     }
+
 })();
