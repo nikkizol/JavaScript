@@ -25,50 +25,54 @@
     let targetArray = target.innerHTML.split('');
     for (let i = 0; i < targetArray.length; i++)
         txt += "<span>" + targetArray[i] + "</span>";
-        console.log(txt)
+    console.log(txt)
 
 
     function run() {
-        n = Math.floor(Math.random()*39) + 1;
+        n = Math.floor(Math.random() * 39) + 1;
         n += 460;
         partOne.value = n;
-        x = Math.floor(Math.random()*99) + 1;
+        x = Math.floor(Math.random() * 99) + 1;
         parttwo.value = x;
-        z = Math.floor(Math.random()*99) + 1;
+        z = Math.floor(Math.random() * 99) + 1;
         partThree.value = z;
-        y = Math.floor(Math.random()*99) + 1;
+        y = Math.floor(Math.random() * 99) + 1;
         partFour.value = y;
         setTimeout(run, speed);
 
     }
+
     run();
     document.getElementById("target").innerHTML = txt;
-    but[0].onclick = function() {
+    but[0].onclick = function () {
         partOne.value = n;
-        document.querySelectorAll('span' )[1].innerHTML =  "";
-        document.querySelectorAll('span' )[2].innerHTML =  "";
-        document.querySelectorAll('span' )[3].innerHTML =  "";
-        document.querySelectorAll('span' )[4].innerHTML = "0" + n;
+        document.querySelectorAll('span')[1].innerHTML = "";
+        document.querySelectorAll('span')[2].innerHTML = "";
+        document.querySelectorAll('span')[3].innerHTML = "";
+        document.querySelectorAll('span')[4].innerHTML = "0" + n;
     }
 
-    but[1].onclick = function() {
+    but[1].onclick = function () {
         partOne.value = x;
         if (x < 10) {
-            x = "0" + x}
+            x = "0" + x
+        }
         document.querySelectorAll('span')[5].innerHTML = "";
         document.querySelectorAll('span')[6].innerHTML = x;
     }
-    but[2].onclick = function() {
+    but[2].onclick = function () {
         partOne.value = z;
         if (z < 10) {
-            z = "0" + z}
+            z = "0" + z
+        }
         document.querySelectorAll('span')[7].innerHTML = "";
         document.querySelectorAll('span')[8].innerHTML = z;
     }
-    but[3].onclick=  function() {
+    but[3].onclick = function () {
         partOne.value = y;
         if (y < 10) {
-            y = "0" + y }
+            y = "0" + y
+        }
         document.querySelectorAll('span')[9].innerHTML = "";
         document.querySelectorAll('span')[10].innerHTML = y;
     }
