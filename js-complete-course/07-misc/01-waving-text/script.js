@@ -17,12 +17,14 @@
     let target = document.getElementById("target");
     let font = 1;
     let targetArray = target.innerHTML.split(' ');
-    for (let i = 0; i <= 6; i++) {
+    let fistPart = (targetArray.length/2).toFixed();
+
+    for (let i = 0; i < fistPart; i++) {
         let txt = targetArray[i].fontsize(font);
         font++
         emptyTarget.push(txt);
     }
-    for (let i = 5; i <= 12; i++) {
+    for (let i = fistPart; i < targetArray.length; i++) {
         let txt = targetArray[i].fontsize(font);
         font--
         emptyTarget.push(txt);
