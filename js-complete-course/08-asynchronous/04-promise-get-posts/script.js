@@ -10,5 +10,24 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click', function  () {
+        new Promise((resolve, reject) => {
+            resolve(window.lib.getPosts())
+        }).then(result => {
+            console.log(result);
+        })
+            .catch(function (error) {
+                console.log(error)
+            })
+
+    });
+
 })();
+
+// ****Works***
+/*
+        let promise = Promise.resolve(window.lib.getPosts());
+        promise.then(function(val) {
+            console.log(val);
+        });
+         */
