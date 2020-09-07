@@ -1,6 +1,6 @@
 /* becode/javascript
  *
- * /10-asynchronous/03-handling-errors/script.js - 10.3: gestion d'erreur
+ * /10-asynchronous/01-get-posts/script.js - 10.1: chargement d'articles
  *
  * coded by leny@BeCode
  * started at 09/05/2019
@@ -10,5 +10,18 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click', function  () {
+        window.lib.getPersons(callback);
+
+    });
+    function callback (error, arrPeople) {
+        if (error) {
+            console.error(error)
+        } else {
+            console.log(arrPeople)
+        }
+
+    }
+
+
 })();
