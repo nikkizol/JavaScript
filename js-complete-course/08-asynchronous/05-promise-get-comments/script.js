@@ -16,14 +16,15 @@
     document.getElementById('run').addEventListener('click', func)
 
     function func() {
-        return new Promise((resolve, reject) => {
+        return new Promise(  (resolve, reject) => {
             let result = window.lib.getPosts()
             resolve(result)
-        }).then((result) => result.forEach(function (post) {
+        }).then( (result) => result.forEach(function (post) {
                 new Promise((resolve, reject) => {
                     let result = window.lib.getComments(post.id)
                     resolve(result)
-                }).then(result => console.log(result))
+                }).then(result => post.comments = result)
+            console.log(post)
 
             }
         )).catch(function (error) {
