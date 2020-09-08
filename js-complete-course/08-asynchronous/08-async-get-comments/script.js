@@ -27,3 +27,24 @@
     }
 
 })();
+// ***works***
+// (() => {
+//
+//     document.getElementById('run').addEventListener('click', func)
+//     async function func() {
+//         try {
+//             let resultPost = await window.lib.getPosts()
+//             resultPost.forEach(post => {
+//                 async function Comment() {
+//                     let resultComments = await window.lib.getComments(post.id)
+//                     post.comments = resultComments
+//                     console.log(post)
+//                 }
+//                 Comment()
+//             })
+//         } catch (error) {
+//             console.log(error)
+//         }
+//     }
+//
+// })();
