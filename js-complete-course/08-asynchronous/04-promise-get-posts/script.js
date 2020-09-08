@@ -12,10 +12,9 @@
 (() => {
     document.getElementById('run').addEventListener('click', func)
     function func () {
-        return new Promise((resolve, reject) => {
+         new Promise((resolve, reject) => {
             resolve(window.lib.getPosts())
-        }).then(result => {
-            console.log(result);
+        }).
         })
             .catch(function (error) {
                 console.log(error)
