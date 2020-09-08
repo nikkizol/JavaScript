@@ -14,7 +14,8 @@
     function func () {
          new Promise((resolve, reject) => {
             resolve(window.lib.getPosts())
-        }).
+        }).then(result => {
+            console.log(result);
         })
             .catch(function (error) {
                 console.log(error)
