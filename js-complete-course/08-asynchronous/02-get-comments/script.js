@@ -21,41 +21,6 @@
 // You will have time to focus on it later.
 
 
-(() => {
-
-    document.getElementById('run').addEventListener('click', function () {
-        window.lib.getPosts(getPostsCallback);
-
-    });
-
-    function getPostsCallback(error, arr) {
-        if (error) {
-            console.error(error)
-        } else {
-            const arrayId = arr.map(function (post) {
-                return post.id
-            })
-            arrayId.forEach(function (id) {
-                window.lib.getComments(id, function (error, arr) {
-                    if (error) {
-                        console.error(error)
-                    } else {
-                        console.table(arr)
-                    }
-
-                })
-            })
-
-
-        }
-
-
-    }
-
-
-})();
-
-//****Works****
 // (() => {
 //
 //     document.getElementById('run').addEventListener('click', function () {
@@ -67,8 +32,11 @@
 //         if (error) {
 //             console.error(error)
 //         } else {
-//             arr.forEach(function (post) {
-//                 window.lib.getComments(post.id, function (error, arr) {
+//             const arrayId = arr.map(function (post) {
+//                 return post.id
+//             })
+//             arrayId.forEach(function (id) {
+//                 window.lib.getComments(id, function (error, arr) {
 //                     if (error) {
 //                         console.error(error)
 //                     } else {
@@ -86,6 +54,38 @@
 //
 //
 // })();
+
+//****Works****
+(() => {
+
+    document.getElementById('run').addEventListener('click', function () {
+        window.lib.getPosts(getPostsCallback);
+
+    });
+
+    function getPostsCallback(error, arr) {
+        if (error) {
+            console.error(error)
+        } else {
+            arr.forEach(function (post) {
+                window.lib.getComments(post.id, function (error, arr) {
+                    if (error) {
+                        console.error(error)
+                    } else {
+                        console.log(arr)
+                    }
+
+                })
+            })
+
+
+        }
+
+
+    }
+
+
+})();
 
 
 
