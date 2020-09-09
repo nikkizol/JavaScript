@@ -10,5 +10,24 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click', function  () {
+        fetch('http://localhost:3000/heroes')
+            .then(response => response.json())
+            .then( (data) => appendData(data));
+        function appendData(data) {
+            let heroName = document.getElementById('hero-name').value
+            let heroEgo = document.getElementById('hero-alter-ego').value
+            let heroPow = document.getElementById('hero-powers').value
+            let id = data.length + 1;
+            data[data.length] = {
+                "id": id,
+                "name": heroName,
+                "alterEgo": heroEgo,
+                "abilities": [heroPow]
+            };
+            console.log(data);
+
+        }
+    });
+
 })();
