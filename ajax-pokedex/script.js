@@ -43,7 +43,6 @@
                 let moves = []
                 for (let i = 0; i < 4; i++) {
                     randArr.push(Math.floor(Math.random() * data.moves.length))
-                    console.log(data.moves)
                 }
                 for (let i = 0; i < 4; i++) {
                     moves.push(data.moves[i].move.name)
@@ -59,8 +58,7 @@
                         .then(response1 => response1.json())
                         .then(data2 => {
                             let path = data2.name;
-                            let evolutionArr = [];
-                            console.log(path)
+                            // let evolutionArr = [];
                             // for (let i = 0; i < path.evolves_to.length; i++) {
                             //     evolutionArr.push(path.evolves_to[i].species.name);
                             //     console.log(evolutionArr)
