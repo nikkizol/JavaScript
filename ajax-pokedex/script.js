@@ -16,6 +16,7 @@
                 }));
                 for (let i = 0; i < pokemon.length; i++) {
                     let input = document.getElementById('pokemon-id_name').value
+
                     if (input == pokemon[i].id || input == pokemon[i].name) {
                         document.querySelector('.name').innerHTML = "Name: " + pokemon[i].name
                         document.querySelector('.id').innerHTML = "Id#: " + pokemon[i].id
@@ -45,7 +46,7 @@
                     randArr.push(Math.floor(Math.random() * data.moves.length))
                 }
                 for (let i = 0; i < 4; i++) {
-                    moves.push(data.moves[i].move.name)
+                    moves.push(data.moves[randArr[i]].move.name)
                 }
                 let unique = [...new Set(moves)]
                 document.querySelector('.moves').innerHTML = "Moves: " + unique.join(', ')
