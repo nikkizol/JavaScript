@@ -23,7 +23,7 @@
                         document.querySelector('.img').src = pokemon[i].image
                         document.querySelector('.evo').innerHTML = 'prev evo: is baby'
                         document.querySelector('.id_prev').innerHTML = ""
-                        document.querySelector('.img_prev').src = " "
+                        document.querySelector('.img_prev').style.display = "none";
 
                     }
                 }
@@ -74,7 +74,9 @@
                                     let id = data3.id
                                     let img = data3.sprites.front_default
                                     document.querySelector('.id_prev').innerHTML = "Id#: " + id
+                                    document.querySelector('.img_prev').style.display = "inline";
                                     document.querySelector('.img_prev').src = img
+
 
                                 }).catch(() => {
                                 console.error("error")
