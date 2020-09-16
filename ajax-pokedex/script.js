@@ -77,7 +77,6 @@
                                     document.querySelector('.img_prev').style.display = "inline";
                                     document.querySelector('.img_prev').src = img
 
-
                                 }).catch(() => {
                                 console.error("error")
                             });
