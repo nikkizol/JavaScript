@@ -1,2 +1,2 @@
 # JavaScript projects:
-### https://nikkizol.github.io/js/
+### https://nikkizol.github.io/JavaScript/
